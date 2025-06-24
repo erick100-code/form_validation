@@ -6,9 +6,171 @@
     <title>Document</title>
     <link href="./output.css" rel="stylesheet">
     <link href="./input.css" rel="stylesheet">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
-<body>
+<body class="font-pop w-screen min-h-screen">
+    <main class="bg-[#6367F1] w-screen min-h-screen flex justify-center items-center p-[0px_0px] landscape:p-[40px_0px]">
+        <form id="form" action="" class="bg-[#F6F8FE] rounded-[5px] capitalize w-[550px] p-[20px] flex flex-col gap-[40px_0px]">
+            
+            <div class="w-full flex justify-between items-center">
+                <h1 id="t1" class="text-[2rem] relative"> <div class="bg-[#6367F1] rounded-[5px] absolute w-[100px] h-[4px] bottom-0 left-0"></div>criar conta</h1>
+                <button class="bg-[#6367F1] rounded-[10px] text-white w-[40px] h-[30px] flex justify-center items-center">
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                </button>
+            </div>
 
+            <div class="grid grid-cols-2 gap-[30px_30px]">
+
+                <div class="flex flex-col gap-[10px_0px]  cxnome group/n1">
+
+                    <label for="nome1" class="group-[.erro]/n1:text-red-600 group-[.valid]/n1:text-emerald-400">primeiro nome</label>
+                    <div class="bg-white rounded-[5px] shadow-[0px_0px_5px_#00000069] h-[40px] w-full relative group-[.erro]/n1:border-[1px] group-[.erro]/n1:border-red-600 group-[.valid]/n1:border-[2px] group-[.valid]/n1:border-emerald-400">
+                        <input class="w-[80%] h-full rounded-[5px] outline-none pl-[10px] flex items-center" type="text" autocomplete="off" name="nome1" id="nome1" placeholder="fulana">
+                        <i class="absolute top-[50%] transform-[translateY(-50%)] right-[20px] fa-solid fa-user"></i>
+                    </div>
+                    <div class="cxerr hidden items-center gap-[0px_10px] group-[.erro]/n1:flex">
+                        <i class="fa-solid fa-circle-exclamation text-red-600"></i>
+                        <span class="hidden text-[14px] group-[.erro]/n1:text-red-600">error </span>
+                    </div>
+                </div>
+  
+                <div class="flex flex-col gap-[10px_0px] cxnome group/n2">
+
+                    <label for="nome2" class="group-[.erro]/n2:text-red-600 group-[.valid]/n2:text-emerald-400">ultimo nome</label>
+                    <div class="bg-white rounded-[5px] shadow-[0px_0px_5px_#00000069] h-[40px] w-full relative group-[.erro]/n2:border-[1px] group-[.erro]/n2:border-red-600 group-[.valid]/n2:border-[2px] group-[.valid]/n2:border-emerald-400">
+                        <input class="w-[80%] h-full rounded-[5px] outline-none pl-[10px] flex items-center" type="text" autocomplete="off" name="nome2" id="nome2" placeholder="de tal">
+                        <i class="absolute top-[50%] transform-[translateY(-50%)] right-[20px] fa-solid fa-user"></i>
+                    </div>
+                    <div class="cxerr hidden items-center gap-[0px_10px] group-[.erro]/n2:flex">
+                        <i class="fa-solid fa-circle-exclamation text-red-600"></i>
+                        <span class="hidden text-[14px] group-[.erro]/n2:text-red-600">error </span>
+                    </div>
+                </div>
+
+                <div class="flex flex-col gap-[10px_0px] group/nasc" id="cxdate">
+                    <label for="nas" class=" group-[.erro]/nasc:text-red-600 group-[.valid]/nasc:text-emerald-400">nascimento</label>
+                    <div class="bg-white rounded-[5px] shadow-[0px_0px_5px_#00000069] h-[40px] w-full relative group-[.erro]/nasc:border-[1px] group-[.erro]/nasc:border-red-600 group-[.valid]/nasc:border-[2px] group-[.valid]/nasc:border-emerald-400">
+                        <input id="icod" class="w-full h-full rounded-[5px] outline-none pl-[10px] flex items-center" type="date" name="nas" id="nas">
+                    </div>
+                    <div class="cxerr hidden items-center gap-[0px_10px] group-[.erro]/nasc:flex">
+                        <i class="fa-solid fa-circle-exclamation text-red-600"></i>
+                        <span class="hidden text-[14px] group-[.erro]/nasc:text-red-600">error </span>
+                    </div>
+                </div>
+
+                <div class="flex flex-col gap-[10px_0px] caixainp group/em">
+                    <label for="emai" class="group-[.erro]/em:text-red-600 group-[.valid]/em:text-emerald-400">email</label>
+                    <div class="bg-white rounded-[5px] shadow-[0px_0px_5px_#00000069] h-[40px] w-full relative group-[.erro]/em:border-[1px] group-[.erro]/em:border-red-600 group-[.valid]/em:border-[2px] group-[.valid]/em:border-emerald-400">
+                        <input class="w-[80%] h-full rounded-[5px] outline-none pl-[10px] flex items-center" type="email" name="emai" id="emai" placeholder="exemplo@gmail.com">
+                        <i class="absolute top-[50%] transform-[translateY(-50%)] right-[20px] fa-solid fa-envelope"></i>
+                    </div>
+                    <div class="cxerr hidden items-center gap-[0px_10px] group-[.erro]/em:flex">
+                        <i class="fa-solid fa-circle-exclamation text-red-600"></i>
+                        <span class="hidden text-[14px] group-[.erro]/em:text-red-600">error </span>
+                    </div>
+                </div>
+
+                <div class="flex flex-col gap-[10px_0px] caixainp group/pa1">
+                    <label for="pass1" class="group-[.erro]/pa1:text-red-600 group-[.valid]/pa1:text-emerald-400">senha</label>
+                    <div class="bg-white rounded-[5px] shadow-[0px_0px_5px_#00000069] h-[40px] w-full relative group-[.erro]/pa1:border-red-600 group-[.erro]/pa1:border-[1px] group-[.valid]/pa1:border-[2px] group-[.valid]/pa1:border-emerald-400">
+                        <input class="w-[80%] h-full rounded-[5px] outline-none pl-[10px] flex items-center  "type="password" name="pass1" id="pass1" placeholder="*********">
+                        <i id="icop1" class="absolute top-[50%] transform-[translateY(-50%)] right-[20px] fa-solid fa-eye-slash"></i>
+                    </div>
+                    <div class="cxerr hidden items-center gap-[0px_10px] group-[.erro]/pa1:flex">
+                        <i class="fa-solid fa-circle-exclamation text-red-600"></i>
+                        <span class="hidden text-[14px] group-[.erro]/pa1:text-red-600">error </span>
+                    </div>
+                </div>
+
+                <div class="flex flex-col gap-[10px_0px] caixainp group/pa2">
+                    <label for="pass2" class="group-[.erro]/pa2:text-red-600 group-[.valid]/pa2:text-emerald-400">confirmar senha</label>
+                    <div class="bg-white rounded-[5px] shadow-[0px_0px_5px_#00000069] h-[40px] w-full relative group-[.erro]/pa2:border-[1px] group-[.erro]/pa2:border-red-600 group-[.valid]/pa2:border-[2px] group-[.valid]/pa2:border-emerald-400">
+                        <input class="w-[80%] h-full rounded-[5px] outline-none pl-[10px] flex items-center" type="password" name="pass2" id="pass2" placeholder="*********">
+
+                        <i id="icop2" class="absolute top-[50%] transform-[translateY(-50%)] right-[20px] fa-solid fa-eye-slash"></i>
+                    </div>
+                     <div class="cxerr hidden items-center gap-[0px_10px] group-[.erro]/pa2:flex">
+                        <i class="fa-solid fa-circle-exclamation text-red-600"></i>
+                        <span class="hidden text-[14px] group-[.erro]/pa2:text-red-600">error </span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex flex-col gap-[10px_0px] group/gene" id="cxgen">
+                <p class="capitalize group-[.erro]/gene:text-red-600 group-[.valid]/gene:text-emerald-400">gênero</p>
+                <div class="flex items-center gap-[0px_20px] capitalize">
+                    <div class="flex items-center gap-[0px_10px]">
+                        <input type="radio" name="genero" id="feminino" class="transform-[scale(1.2)] radin">
+                        <label for="feminino" class="select-none">feminino</label>
+                    </div>
+
+                    <div class="flex items-center gap-[0px_10px]">
+                        <input type="radio" name="genero" id="masculino" class="transform-[scale(1.2)] radin">
+                        <label for="masculino" class="select-none">masculino</label>
+                    </div>
+
+                    <div class="flex items-center gap-[0px_5px]">
+                        <input type="radio" name="genero" id="outro" class="transform-[scale(1.2)] radin">
+                        <label for="outro" class="select-none">outro</label>
+                    </div>
+                </div>
+                <div class="cxerr hidden items-center gap-[0px_10px] group-[.erro]/gene:flex">
+                    <i class="fa-solid fa-circle-exclamation text-red-600"></i>
+                    <span class="hidden text-[14px] group-[.erro]/gene:text-red-600">error </span>
+                </div>
+            </div>
+
+            <button class="bg-[#595CD7] rounded-[10px] text-white p-[10px] w-full flex justify-center items-center cursor-pointer"><i class="fa-solid fa-check pr-[15px]"></i> criar conta</button>
+        </form>
+    </main>
+
+    <script src="validation.js"></script>
+
+    <script>//icop1
+        const icop1 = document.getElementById('icop1')
+        const icop2 = document.getElementById('icop2')
+
+        icop1.style.cursor = 'pointer'
+        icop2.style.cursor = 'pointer'
+        
+        icop1.addEventListener('click', () => {
+            let inp = document.getElementById('pass1')
+            
+            if (inp.type == 'password') {
+                inp.type = 'text'
+
+                icop1.classList.remove('fa-eye-slash')
+
+                icop1.classList.add('fa-eye')
+            } else if (inp.type == 'text') {
+                inp.type = 'password'
+                icop1.classList.remove('fa-eye')
+                icop1.classList.add('fa-eye-slash')
+            } 
+        })
+
+        icop2.addEventListener('click', () => {
+            const inp2 = document.getElementById('pass2')
+
+            let tp = inp2.type === "password" ? "text" : "password"
+            inp2.type = tp
+
+            icop2.classList.toggle('fa-eye-slash')
+            icop2.classList.toggle('fa-eye')
+        })
+
+    </script>
+
+    <!-- <script>
+        function selecionarTexto() {
+            const texto = document.getElementById('t1');// seleciona o texto
+            const range = document.createRange();// cria um objeto que representa a area selecionada por completo
+            range.selectNode(texto);// interliga esse objeto no texto
+            const selection = window.getSelection(); variavel selection recebe o elemento selecionado no window
+            selection.removeAllRanges();// remove todas as seleçõs atuais
+            selection.addRange(range);// selecioona o objeto range que esta interligado com o texto
+        }
+
+    </script> -->
 </body>
 </html>
